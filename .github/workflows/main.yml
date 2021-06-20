@@ -26,7 +26,7 @@ jobs:
       - name: Run Docker
         run: |
           sudo systemctl unmask docker
-          sudo systemctl start docker
+          sudo service start docker
         
       - name: Run generator
         run: sudo bash a.sh
