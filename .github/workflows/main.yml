@@ -24,7 +24,9 @@ jobs:
         run: sudo apt-get install -y docker
 
       - name: Run Docker
-        run: sudo service docker start
+        run: |
+          sudo systemctl unmask docker
+          sudo systemctl start docker
         
       - name: Run generator
         run: sudo bash a.sh
